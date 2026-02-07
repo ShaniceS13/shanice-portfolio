@@ -1,0 +1,32 @@
+import React from "react";
+import "./Home.css";
+
+export default function Home() {
+  return (
+    <section className="section-hero" id="home">
+      <div className="heroTop">
+        <div className="heroText">
+          <p className="kicker">Hi, I'm Shanice ✨</p>
+
+          <h2 className="headline">
+            I build modern, beautiful web experiences
+          </h2>
+
+          <p className="subhead">
+            Professional, approachable, and detail-focused. I love turning ideas
+            into clean, responsive interfaces.
+          </p>
+
+          <div className="call-to-actionRow">
+            <button className="btn primary">View Projects</button>
+            <button className="btn ghost">Contact me </button>
+          </div>
+        </div>
+
+        <div className="heroPhoto">
+          <span>Photo of Shanice</span>
+        </div>
+      </div>
+    </section>
+  );
+}

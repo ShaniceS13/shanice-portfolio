@@ -1,4 +1,5 @@
 import React from "react";
+import "./Sidebar.css";
 
 export default function Sidebar() {
   return (
@@ -20,6 +21,15 @@ export default function Sidebar() {
           </a>
         </div>
       </div>
+
+      <nav className="navigation-bar">
+        <button className="navLink">Home</button>
+        <button className="navLink">About</button>
+        <button className="navLink">Resume</button>
+        <button className="navLink">Projects</button>
+        <button className="navLink">Services</button>
+        <button className="navLink">Contact</button>
+      </nav>
     </aside>
   );
 }
