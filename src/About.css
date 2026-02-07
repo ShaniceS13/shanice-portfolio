@@ -1,0 +1,37 @@
+/* About-specific tweaks (light) */
+.sectionTitle {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: 18px;
+  max-width: 900px;
+}
+
+.cardText {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background: var(--accentSoft);
+  border: 1px solid rgba(201, 164, 142, 0.35);
+  color: #7b5a48;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
