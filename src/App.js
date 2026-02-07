@@ -2,6 +2,8 @@ import "./App.css";
 import Sidebar from "./Sidebar";
 import Home from "./Home";
 import About from "./About";
+import Resume from "./Resume";
+import Projects from "./Projects";
 
 export default function App() {
   return (
@@ -11,6 +13,8 @@ export default function App() {
       <main className="main">
         <Home />
         <About />
+        <Resume />
+        <Projects />
       </main>
     </div>
   );

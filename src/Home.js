@@ -18,8 +18,18 @@ export default function Home() {
           </p>
 
           <div className="call-to-actionRow">
-            <button className="btn primary">View Projects</button>
-            <button className="btn ghost">Contact me </button>
+            <button
+              className="btn primary"
+              onClick={() => handleScroll("projects")}
+            >
+              View Projects
+            </button>
+            <button
+              className="btn ghost"
+              onClick={() => handleScroll("contact")}
+            >
+              Contact me{" "}
+            </button>
           </div>
         </div>
 
@@ -29,4 +39,11 @@ export default function Home() {
       </div>
     </section>
   );
+}
+
+function handleScroll(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
 }
