@@ -23,13 +23,34 @@ export default function Sidebar() {
       </div>
 
       <nav className="navigation-bar">
-        <button className="navLink">Home</button>
-        <button className="navLink">About</button>
-        <button className="navLink">Resume</button>
-        <button className="navLink">Projects</button>
-        <button className="navLink">Services</button>
-        <button className="navLink">Contact</button>
+        <button className="navLink" onClick={() => handleScroll("home")}>
+          Home
+        </button>
+        <button className="navLink" onClick={() => handleScroll("about")}>
+          About
+        </button>
+        <button className="navLink" onClick={() => handleScroll("resume")}>
+          Resume
+        </button>
+        <button className="navLink" onClick={() => handleScroll("projects")}>
+          Projects
+        </button>
+        <button className="navLink" onClick={() => handleScroll("services")}>
+          Services
+        </button>
+        <button className="navLink" onClick={() => handleScroll("contact")}>
+          Contact
+        </button>
       </nav>
     </aside>
   );
+}
+
+function handleScroll(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    return null;
+  }
 }
