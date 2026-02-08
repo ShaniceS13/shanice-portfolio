@@ -1,30 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Home.css";
 import FadeInSection from "./FadeInSection";
 import heroPhoto from "./assets/hero-photo.png";
 
 export default function Home() {
-  const [hideHeroPhoto, setHideHeroPhoto] = useState(false);
-
-  useEffect(() => {
-    function onScroll() {
-      setHideHeroPhoto(window.scrollY > 40); // fades once you start scrolling
-    }
-
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <FadeInSection delay={0}>
       <section className="section-hero" id="home">
         <div className="heroShell">
-          <div className={`heroBgPhoto ${hideHeroPhoto ? "hide" : ""}`}>
-            <img src={heroPhoto} alt="Shanice" />
-          </div>
-
           <div className="heroTop">
             <div className="heroText">
               <p className="kicker">Hi, I'm Shanice ✨</p>
@@ -52,6 +35,10 @@ export default function Home() {
                   Contact me{" "}
                 </button>
               </div>
+            </div>
+
+            <div className="heroPhoto">
+              <img src={heroPhoto} alt="Shanice" />
             </div>
           </div>
         </div>

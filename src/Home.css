@@ -36,53 +36,36 @@
 }
 
 .heroPhoto {
-  width: 350px;
-  height: 350px;
-  background: white;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6e6e6e;
+  width: 420px;
+  max-width: 45%;
+  height: 360px;
+  background: var(--card);
   border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+.heroPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
 }
 
 .heroShell {
   position: relative;
 }
 
-.heroBgPhoto {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -10px;
-  height: 260px; /* this is the “horizontal strip” height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-
-  opacity: 0.18;
-  transition:
-    opacity 400ms ease,
-    transform 400ms ease;
-}
-
-.heroBgPhoto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  border-radius: 18px; /* soft rectangle instead of a circle */
-  filter: grayscale(10%);
-}
-
-.heroBgPhoto.hide {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
 .heroTop {
-  position: relative;
-  z-index: 2;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .heroPhoto {
+    display: none;
+  }
 }
