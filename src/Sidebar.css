@@ -9,12 +9,13 @@
   height: 160px;
   margin: 0 auto 14px;
   border-radius: 50%;
-  background: #d8d8d8;
-  color: #1f1f1f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .name {
@@ -109,4 +110,55 @@
   bottom: 0;
 
   overflow-y: auto;
+}
+
+.menuToggle {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--card);
+
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 280px;
+    transform: translateX(-105%);
+    transition: transform 250ms ease;
+    z-index: 9998;
+  }
+
+  .menuOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 9997;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main {
+    margin-left: 0 !important;
+    padding-top: 70px;
+  }
 }
