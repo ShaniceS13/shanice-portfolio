@@ -59,4 +59,5 @@ button:focus {
 .main {
   flex: 1;
   padding: 30px;
+  margin-left: 320px;
 }

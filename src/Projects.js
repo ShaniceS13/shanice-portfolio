@@ -4,6 +4,7 @@ import weatherImg from "./assets/weather.png";
 import dictionaryImg from "./assets/dictionary.png";
 import eliteTourImg from "./assets/elitetour.png";
 import recipeImg from "./assets/recipe.png";
+import FadeInSection from "./FadeInSection";
 
 export default function Projects() {
   const projects = [
@@ -45,45 +46,47 @@ export default function Projects() {
   ];
 
   return (
-    <section className="section" id="projects">
-      <h3 className="sectionTitle">Projects</h3>
+    <FadeInSection delay={160}>
+      <section className="section" id="projects">
+        <h3 className="sectionTitle">Projects</h3>
 
-      <div className="projects-grid">
-        {projects.map((project) => {
-          return (
-            <div className="projectCard" key={project.title}>
-              <img
-                className="projectImage"
-                src={project.image}
-                alt={`${project.title} screenshot`}
-              />
+        <div className="projects-grid">
+          {projects.map((project) => {
+            return (
+              <div className="projectCard" key={project.title}>
+                <img
+                  className="projectImage"
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                />
 
-              <h4 className="projectTitle">{project.title}</h4>
-              <p className="projectDesc">{project.description}</p>
-              <p className="projectTech">{project.tech}</p>
+                <h4 className="projectTitle">{project.title}</h4>
+                <p className="projectDesc">{project.description}</p>
+                <p className="projectTech">{project.tech}</p>
 
-              <div className="projectLinks">
-                <a
-                  className="link"
-                  href={project.live}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
-                <a
-                  className="link"
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
+                <div className="projectLinks">
+                  <a
+                    className="link"
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    className="link"
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
+            );
+          })}
+        </div>
+      </section>
+    </FadeInSection>
   );
 }
