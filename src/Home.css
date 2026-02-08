@@ -46,3 +46,43 @@
   color: #6e6e6e;
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
+
+.heroShell {
+  position: relative;
+}
+
+.heroBgPhoto {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 260px; /* this is the “horizontal strip” height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  opacity: 0.18;
+  transition:
+    opacity 400ms ease,
+    transform 400ms ease;
+}
+
+.heroBgPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 18px; /* soft rectangle instead of a circle */
+  filter: grayscale(10%);
+}
+
+.heroBgPhoto.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.heroTop {
+  position: relative;
+  z-index: 2;
+}
