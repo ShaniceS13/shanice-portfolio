@@ -27,3 +27,9 @@
   line-height: 1.6;
   color: var(--text);
 }
+
+.resumeButtons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}

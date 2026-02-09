@@ -29,7 +29,24 @@ export default function Resume() {
             </div>
           </div>
 
-          <button className="btn primary">Download Resume</button>
+          <div className="resumeButtons">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="btn ghost"
+            >
+              View PDF 👀
+            </a>
+
+            <a
+              href="/resume.pdf"
+              download="Shanice-Solomon-Resume.pdf"
+              className="btn primary"
+            >
+              Download PDF 📄
+            </a>
+          </div>
         </div>
       </section>
     </FadeInSection>
