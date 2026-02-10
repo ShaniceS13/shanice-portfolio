@@ -43,6 +43,7 @@ export default function Resume() {
               href="/resume.pdf"
               download="Shanice-Solomon-Resume.pdf"
               className="btn primary"
+              rel="noreferrer"
             >
               Download PDF 📄
             </a>
