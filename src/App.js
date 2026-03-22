@@ -1,5 +1,5 @@
 import "./App.css";
-import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
 import Home from "./Home";
 import About from "./About";
 import Resume from "./Resume";
@@ -10,9 +10,9 @@ import Contact from "./Contact";
 export default function App() {
   return (
     <div className="App">
-      <Sidebar />
+      <Navbar />
 
-      <main className="main">
+      <main>
         <Home />
         <About />
         <Resume />
