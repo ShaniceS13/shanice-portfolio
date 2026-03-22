@@ -13,7 +13,7 @@ export default function Home() {
       <div className="hero-left">
         <p className="hero-eyebrow">
           <span className="hero-eyebrow-line" />
-          Front-end Developer · Roatan, Honduras
+          Front-end Developer · Atlanta, GA
         </p>
 
         <h1 className="hero-headline">
