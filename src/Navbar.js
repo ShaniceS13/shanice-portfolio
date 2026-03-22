@@ -41,7 +41,9 @@ export default function Navbar() {
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
-        <span className={`burger ${menuOpen ? "open" : ""}`} />
+        <span className="burger-line" />
+        <span className="burger-line" />
+        <span className="burger-line" />
       </button>
     </nav>
   );

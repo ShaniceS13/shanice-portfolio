@@ -4,6 +4,8 @@
   transition:
     opacity 550ms ease,
     transform 550ms ease;
+  position: relative;
+  z-index: 1;
 }
 
 .fadeInSection.isVisible {
