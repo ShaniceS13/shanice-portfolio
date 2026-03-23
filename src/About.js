@@ -29,7 +29,7 @@ export default function About() {
             <p>
               That curiosity turned into a full-on passion. I'm now a
               bootcamp-certified front-end developer building clean, purposeful
-              web experiences — and working toward computational biology, where
+              web experiences and working toward computational biology, where
               code and science finally meet.
             </p>
             <p>
