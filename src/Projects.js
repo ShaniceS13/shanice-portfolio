@@ -9,82 +9,96 @@ import FadeInSection from "./FadeInSection";
 export default function Projects() {
   const projects = [
     {
+      num: "01",
       title: "React Weather App",
-      description: "React weather app with live API and a 5-day forecast.",
-      tech: "React • API • Axios • CSS",
+      description:
+        "Live weather data with 5-day forecast, dynamic UI updates, and real-time API calls. Clean, responsive layout built in React",
+      tech: "React · API · Axios · CSS ",
       github: "https://github.com/ShaniceS13/react-weather-app",
       live: "https://startling-zabaione-3299e4.netlify.app/",
       image: weatherImg,
     },
+
     {
+      num: "02",
       title: "Dictionary App",
       description:
-        "A React dictionary app where users can search any word and view definitions and parts of speech in a clean layout.",
-      tech: "React • API • Axios • CSS • Bootstrap",
+        "Search any word and instantly view definitions, parts of speech, and usage examples in a clean, minimal layout",
+      tech: "React · API · Axios · Bootstrap",
       github: "https://github.com/ShaniceS13/dictionary-project",
       live: "https://neon-manatee-bd2d44.netlify.app/",
       image: dictionaryImg,
     },
+
     {
-      title: "Welcome to Roatan",
+      num: "03",
+      title: "Landing Page",
       description:
-        "A tourism landing site showcasing Roatán and a selection of Elite Roatan Tours, with tour highlights and island photography.",
-      tech: "HTML • CSS • JavaScript • Bootstrap",
+        "A tourism landing site showcasing Roatan and Elite Roatan Tours. Island photography, tour highlights, and warm island energy",
+      tech: "HTML · CSS · JavaScript · Bootstrap",
       github: "https://github.com/ShaniceS13/my-roatan-tours-website",
       live: "https://effervescent-twilight-b025bf.netlify.app/",
       image: eliteTourImg,
     },
+
     {
+      num: "04",
       title: "Caribbean Recipe Generator",
       description:
-        "Type any ingredient and generate a Caribbean-inspired recipe featuring that ingredient.",
-      tech: "HTML • CSS • JavaScript",
+        "Type ANY ingredient and generate an AI-powered Caribbean-inspired recipe. A personal project rooted in island culture",
+      tech: "HTML · CSS · JavaScript",
       github: "https://github.com/ShaniceS13/recipe-generator",
       live: "https://ss-ai-recipes-generator.netlify.app/",
       image: recipeImg,
     },
   ];
-
   return (
     <FadeInSection delay={160}>
-      <section className="section" id="projects">
-        <h3 className="sectionTitle">Projects</h3>
+      <section className="projects section" id="projects">
+        <div className="section-header">
+          <h2 className="section-title">Selected Work</h2>
+          <span className="section-count">04 Projects</span>
+        </div>
 
         <div className="projects-grid">
-          {projects.map((project) => {
-            return (
-              <div className="projectCard" key={project.title}>
+          {projects.map((project) => (
+            <div className="project-card" key={project.title}>
+              <div className="project-img-wrap">
                 <img
-                  className="projectImage"
                   src={project.image}
                   alt={`${project.title} screenshot`}
+                  className="project-img"
                 />
+              </div>
 
-                <h4 className="projectTitle">{project.title}</h4>
-                <p className="projectDesc">{project.description}</p>
-                <p className="projectTech">{project.tech}</p>
-
-                <div className="projectLinks">
+              <div className="project-body">
+                <div className="project-header">
+                  <span className="project-num">{project.num}</span>
+                  <h3 className="project-title">{project.title}</h3>
+                </div>
+                <p className="project-desc">{project.description}</p>
+                <p className="project-tech">{project.tech}</p>
+                <div className="project-links">
                   <a
-                    className="link"
                     href={project.live}
                     target="_blank"
                     rel="noreferrer"
+                    className="project-link"
                   >
-                    Live Demo
+                    Live Demo <span className="project-link-arrow">↗</span>
                   </a>
                   <a
-                    className="link"
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
+                    className="project-link"
                   >
-                    GitHub
+                    GitHub <span className="project-link-arrow">↗</span>
                   </a>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </section>
     </FadeInSection>
